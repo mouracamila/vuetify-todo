@@ -1,10 +1,9 @@
 <template>
-  <v-app>
+  <v-app class="grey lighten-4">
     <Navbar/>
-    <v-content>
-      
+   
+   <v-content class="mx-4 mb-4">
       <router-view></router-view>
-    
     </v-content>
   
   </v-app>
@@ -15,7 +14,7 @@ import Navbar from '@/components/Navbar'
 
 export default {
   name: 'App',
-  components: { Navbar},
+  components: { Navbar },
  
   data () {
     return {
