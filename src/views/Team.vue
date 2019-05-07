@@ -2,13 +2,15 @@
   <div class="team">
     <h1 class="subheading grey--text">Team</h1>
         
-        <v-container class="my-5">
-           
+      <v-container class="my-5">
+            
         <v-layout row wrap>
           <v-flex xs12 sm6 md4 lg3 v-for="person in team" :key="person.name">
             <v-card flat class="text-xs-center ma-3">
               <v-responsive class="pt-4">
-                image goes here
+                <v-avatar size="100" class="grey lighten-2">
+                  <img :src="person.avatar">
+                </v-avatar>
               </v-responsive>
               <v-card-text>
                 <div class="subheading">{{ person.name }}</div>
@@ -22,9 +24,9 @@
               </v-card-action>
             </v-card>
           </v-flex>
-          </v-layout>          
- 
-        </v-container>
+        </v-layout>          
+
+      </v-container>
 
   </div>
     
@@ -37,11 +39,11 @@ export default {
   data() {
     return {
       team: [
-        { name: 'Ninja', role: 'Web developer' },
-        { name: 'Ryu', role: 'Graphic designer' },
-        { name: 'Chun Li', role: 'Web developer' },
-        { name: 'Goken', role: 'Social media maverick' },
-        { name: 'Yoshi', role: 'Sales guru' },
+        { name: 'Ninja', role: 'Web developer', avatar: '/avatar-1.png' },
+        { name: 'Ryu', role: 'Graphic designer', avatar: '/avatar-2.png' },
+        { name: 'Chun Li', role: 'Web developer', avatar: '/avatar-3.png' },
+        { name: 'Goken', role: 'Social media maverick', avatar: '/avatar-4.png' },
+        { name: 'Yoshi', role: 'Sales guru', avatar: '/avatar-5.png' },
       ]
     }
   }
