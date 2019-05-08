@@ -20,7 +20,7 @@
                         <img src="https://i.pravatar.cc/150?" alt="">
                     </v-avatar>
                     <p class="white--text subheading mt-1">
-                        ninja
+                        Ninja
                     </p>
                 </v-flex> 
             </v-layout>
