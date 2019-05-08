@@ -39,11 +39,11 @@ export default {
   data() {
     return {
       team: [
-        { name: 'Ninja', role: 'Web developer', avatar: '/avatar-1.png' },
-        { name: 'Ryu', role: 'Graphic designer', avatar: '/avatar-2.png' },
-        { name: 'Chun Li', role: 'Web developer', avatar: '/avatar-3.png' },
-        { name: 'Goken', role: 'Social media maverick', avatar: '/avatar-4.png' },
-        { name: 'Yoshi', role: 'Sales guru', avatar: '/avatar-5.png' },
+        { name: 'Ninja', role: 'Web developer', avatar: 'https://i.pravatar.cc/150?img=1' },
+        { name: 'Ryu', role: 'Graphic designer', avatar: 'https://i.pravatar.cc/150?img=2' },
+        { name: 'Chun Li', role: 'Web developer', avatar: 'https://i.pravatar.cc/150?img=3' },
+        { name: 'Goken', role: 'Social media maverick', avatar: 'https://i.pravatar.cc/150?img=4' },
+        { name: 'Yoshi', role: 'Sales guru', avatar: 'https://i.pravatar.cc/150?img=5' },
       ]
     }
   }
