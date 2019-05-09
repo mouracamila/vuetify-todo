@@ -25,5 +25,10 @@ npm run test
 npm run lint
 ```
 
+### Configure Firebase
+
+- Copy the file `fb.js.config-me` and rename the copy to `fb.js`
+- Open the file and configure it using your Google Firebase configuration
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
