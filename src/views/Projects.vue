@@ -24,16 +24,11 @@
 </template>
 
 <script>
-
+import db from '@/fb'
 export default {
   data() {
     return {
-      projects: [
-        { title: 'Design a new website', person:'Ninja', due: '1st Jan 2019', status: 'ongoing', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
-        { title: 'Code up the homepage', person:'chun Li', due: '10th Jan 2019', status:'complete', content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
-        { title: 'Design a the homepage', person:'Ryu', due: '20th Dec 2019', status: 'complete', content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to eiusmod tempor incididunt ut labore et dolore magna aliqua.'},
-        { title: 'Create a community forum', person:'Rafa', due: '14th Jul 2019', status: 'overdue', content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed to eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
-      ]
+      projects: [ ]
     }
   },
   computed: {
@@ -42,6 +37,20 @@ export default {
         return project.person === 'Ninja'
       })
     }
+  },
+  created() {
+    db.collection('projects').onSnapshot(res => {
+      const changes = res.docChanges();
+      
+      changes.forEach(change => {
+        if (change.type === 'added'){
+          this.projects.push({
+            ...change.doc.data(),
+            id: change.doc.id
+          })
+        }
+      })
+    })
   }
 }
 </script>
