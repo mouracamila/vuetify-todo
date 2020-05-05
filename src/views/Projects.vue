@@ -5,8 +5,8 @@
     <v-container class="my-5">
 
       <v-expansion-panel>
-        <v-expansion-panel-content v-for="project in projects" :key="project.title">
-          <div slot="header">{{ project.title }}</div>
+        <v-expansion-panel-content v-for="project in projects" :key="project.name">
+          <div slot="header">{{ id }}</div>
           <v-card>
             <v-card-text class="px-4 grey--text">
               <div class="font-weight-bold">due by {{ project.due}}</div>
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+
 import db from '@/fb'
 export default {
   data() {
